@@ -18,6 +18,7 @@
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
+const KEY_LEFT = 37;
 
 var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
@@ -32,7 +33,9 @@ var health = 100;  // health van speler
  */
 var beweegAlles = function() {
   // speler
-
+if (keyIsDown(37)) {
+  spelerX = spelerX -1;
+}  
   // vijand
 
   // kogel
@@ -57,7 +60,9 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {  
   // achtergrond
-
+fill ("green");
+  rect(0,0,1280,720);
+  
   // vijand
 
   // kogel
