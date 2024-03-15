@@ -55,7 +55,7 @@ var verwerkBotsing = function() {
 /**
  * Tekent spelscherm
  */
-var tekenAlles = function() {
+var tekenAlles = function() {  
   // achtergrond
 
   // vijand
@@ -63,9 +63,9 @@ var tekenAlles = function() {
   // kogel
 
   // speler
-  fill("white");
+  fill("blue");
   rect(spelerX - 25, spelerY - 25, 50, 50);
-  fill("black");
+  fill("red");
   ellipse(spelerX, spelerY, 10, 10);
 
   // punten en health
