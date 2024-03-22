@@ -17,6 +17,10 @@
 /* ********************************************* */
 const SPELEN = 1;
 const GAMEOVER = 2;
+const KEY_w = 87;
+const KEY_a = 65;
+const KEY_s = 83;
+const KEY_d = 68;
 var spelStatus = SPELEN;
 const KEY_LEFT = 37;
 
@@ -33,9 +37,19 @@ var health = 100;  // health van speler
  */
 var beweegAlles = function() {
   // speler
-if (keyIsDown(37)) {
+if (keyIsDown(KEY_a)) {
   spelerX = spelerX -1;
 }  
+  if (keyIsDown(KEY_d)) {
+    spelerX = spelerX +1;
+  }
+
+if (keyIsDown(KEY_w)) {
+  spelerY = spelerY -1
+}
+  if (keyIsDown(KEY_s)) {
+    spelerY = spelerY +1
+  }
   // vijand
 
   // kogel
@@ -60,7 +74,7 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {  
   // achtergrond
-fill ("green");
+fill ("red");
   rect(0,0,1280,720);
   
   // vijand
