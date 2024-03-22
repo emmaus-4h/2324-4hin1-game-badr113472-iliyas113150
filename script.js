@@ -74,14 +74,17 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {  
   // achtergrond
-fill ("red");
+fill ("green");
   rect(0,0,1280,720);
   
   // vijand
-fill ("red");
-rect (spelerX - 70, spelerY - 100, 50, 50)
-  fill ("green");
-  ellipse(spelerX, spelerY, 10, 10);
+  var vijandX = 600
+  var vijandY = 600
+  var health = 100
+fill ("orange");
+rect (vijandX - 70, vijandY - 100, 50, 50)
+  fill ("red");
+  ellipse(vijandX, vijandY, 10, 10);
   // kogel
 
   // speler
