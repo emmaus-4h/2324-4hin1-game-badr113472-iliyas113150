@@ -78,7 +78,10 @@ fill ("red");
   rect(0,0,1280,720);
   
   // vijand
-
+fill ("red");
+rect (spelerX - 70, spelerY - 100, 50, 50)
+  fill ("green");
+  ellipse(spelerX, spelerY, 10, 10);
   // kogel
 
   // speler
