@@ -31,6 +31,9 @@ var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 var health = 100;  // health van speler
 
+var vijandX = 600
+var vijandY = 600
+var health = 100
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -55,19 +58,19 @@ if (keyIsDown(KEY_w)) {
   }
   // vijand
 if (keyIsDown(KEY_LEFT)) {
-  spelerX= spelerX -1;
+  vijandX= vijandX -1;
 }
 
   if (keyIsDown(KEY_UP)) {
-    spelerY = spelerY -1;
+    vijandY = vijandY -1;
   }
 
   if (keyIsDown(KEY_DOWN)) {
-    spelerY = spelerY +1
+    vijandY = vijandY +1
   }
 
-  if (keyyIsDown(KEY_RIGHT)) {
-    spelerX = spelerX +1;
+  if (keyIsDown(KEY_RIGHT)) {
+    vijandX = vijandX +1;
   }
   // kogel
 };
@@ -95,11 +98,8 @@ fill ("green");
   rect(0,0,1280,720);
   
   // vijand
-  var vijandX = 600
-  var vijandY = 600
-  var health = 100
-fill ("orange");
-rect (vijandX - 70, vijandY - 100, 50, 50)
+  fill ("orange");
+  rect (vijandX - 70, vijandY - 100, 50, 50)
   fill ("red");
   ellipse(vijandX, vijandY, 10, 10);
   // kogel
