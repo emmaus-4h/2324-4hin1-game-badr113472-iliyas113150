@@ -23,6 +23,9 @@ const KEY_s = 83;
 const KEY_d = 68;
 var spelStatus = SPELEN;
 const KEY_LEFT = 37;
+const KEY_UP = 38;
+const KEY_RIGHT = 39;
+const KEY_DOWN = 40;
 
 var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
@@ -51,7 +54,21 @@ if (keyIsDown(KEY_w)) {
     spelerY = spelerY +1
   }
   // vijand
+if (keyIsDown(KEY_LEFT)) {
+  spelerX= spelerX -1;
+}
 
+  if (keyIsDown(KEY_UP)) {
+    spelerY = spelerY -1;
+  }
+
+  if (keyIsDown(KEY_DOWN)) {
+    spelerY = spelerY +1
+  }
+
+  if (keyyIsDown(KEY_RIGHT)) {
+    spelerX = spelerX +1;
+  }
   // kogel
 };
 
