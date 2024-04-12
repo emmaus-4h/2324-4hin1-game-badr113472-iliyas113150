@@ -31,9 +31,9 @@ var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 var health = 100;  // health van speler
 
-var vijandX = 600
-var vijandY = 600
-var health = 100
+var vijandX = 550;
+var vijandY = 550;
+var health = 100;
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -98,9 +98,9 @@ fill ("green");
   rect(0,0,1280,720);
   
   // vijand
-  fill ("orange");
-  rect (vijandX - 70, vijandY - 100, 50, 50)
   fill ("red");
+  rect (vijandX - 25, vijandY - 25, 50, 50)
+  fill ("blue");
   ellipse(vijandX, vijandY, 10, 10);
   // kogel
 
