@@ -17,11 +17,12 @@
 /* ********************************************* */
 const SPELEN = 1;
 const GAMEOVER = 2;
+const UITLEG = 8;
 const KEY_w = 87;
 const KEY_a = 65;
 const KEY_s = 83;
 const KEY_d = 68;
-var spelStatus = SPELEN;
+var spelStatus = UITLEG;
 const KEY_LEFT = 37;
 const KEY_UP = 38;
 const KEY_RIGHT = 39;
@@ -151,7 +152,16 @@ function draw() {
       spelStatus = GAMEOVER;
     }
   }
-  if (spelStatus === GAMEOVER) {
-    // teken game-over scherm
+   if (spelStatus === GAMEOVER) {
+     // teken gameover scherm
+     text("game over", 200, 200);
+     
+  }
+  if (spelStatus === UITLEG) {
+    // teken uitleg scherm
+     text("druk op spatie", 200, 300);
+    if (keyIsDown(32)) {
+      spelStatus = SPELEN;
+    }
   }
 }
