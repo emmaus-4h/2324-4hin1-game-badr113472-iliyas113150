@@ -18,11 +18,12 @@
 const SPELEN = 1;
 const GAMEOVER = 2;
 const UITLEG = 8;
+var spelStatus = UITLEG;
+
 const KEY_w = 87;
 const KEY_a = 65;
 const KEY_s = 83;
 const KEY_d = 68;
-var spelStatus = UITLEG;
 const KEY_LEFT = 37;
 const KEY_UP = 38;
 const KEY_RIGHT = 39;
