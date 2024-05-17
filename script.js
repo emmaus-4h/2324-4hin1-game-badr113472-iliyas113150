@@ -18,7 +18,7 @@
 const SPELEN = 1;
 const GAMEOVER = 2;
 const UITLEG = 8;
-var spelStatus = UITLEG;
+var spelStatus = SPELEN;
 
 const KEY_w = 87;
 const KEY_a = 65;
