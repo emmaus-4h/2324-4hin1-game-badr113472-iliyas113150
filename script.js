@@ -20,6 +20,7 @@ const GAMEOVER = 2;
 const UITLEG = 3;
 var spelStatus = SPELEN;
 
+
 const KEY_w = 87;
 const KEY_a = 65;
 const KEY_s = 83;
@@ -29,13 +30,14 @@ const KEY_UP = 38;
 const KEY_RIGHT = 39;
 const KEY_DOWN = 40;
 
-var spelerX = 600; // x-positie van speler
+var spelerX = 800; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 var health = 100;  // health van speler
 
-var vijandX = 550;
-var vijandY = 550;
+var vijandX = 400;
+var vijandY = 600;
 var health = 100;
+
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -165,8 +167,14 @@ function draw() {
     console.log("game over");
     textSize(60);
     fill("white");
-    text("Game Over", 100, 100);
-
+    text("Game Over, Druk Spatie voor Start", 100, 100);
+  if (keyIsDown (32)) { // spatie
+    spelerY = 600;
+    spelerX = 800;
+    vijandX = 400;
+    vijandY = 600;
+  spelStatus = SPELEN;
+  }
   }
   if (spelStatus === UITLEG) {
     // teken uitleg scherm
