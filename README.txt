@@ -20,3 +20,10 @@ https://cs50.harvard.edu/games/2018/
 - icon <br>
         http://www.iconarchive.com/show/android-lollipop-icons-by-dtafalonso/Play-Games-icon.html
 - ...
+
+## PLAN na laatste les
+1. achtergrondplaatje: zie video bij opdracht
+2. kogel schieten: zie video bij opdracht
+3. punten: zet eerst health op het scherm, maak daarna een variabel punten en zet dan de punten op het scherm
+4. spelers vervangen voor plaatjes. Denk eraan dat je zelfde grootte moet nemen als de spelers, anders klopt je hitbox niet meer.
+5. misschien nog verrassingselementen (bom ofzo)
