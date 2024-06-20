@@ -169,7 +169,7 @@ function draw() {
     fill("white");
     text("Game Over, Druk Spatie voor Start", 100, 100);
   if (keyIsDown (32)) { // spatie
-    spelerY = 600;
+    spelerY = 601;
     spelerX = 800;
     vijandX = 400;
     vijandY = 600;
