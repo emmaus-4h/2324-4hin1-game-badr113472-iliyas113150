@@ -34,6 +34,10 @@ var spelerX = 800; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 var health = 100;  // health van speler
 
+var kogelX=400;
+var kogelY=300;
+var kogelVliegt = false
+
 var vijandX = 400;
 var vijandY = 600;
 var health = 100;
@@ -77,6 +81,20 @@ var beweegAlles = function() {
     vijandX = vijandX + 1;
   }
   // kogel
+
+  if (kogelVliegt === false && 
+      keyIsDown(32)) { //start schieten
+    kogelVliegt = true;
+    kogelX = spelerX;
+    kogelY = spelerY;
+  }
+  if (kogelVliegt === true ) { //kogel vliegt
+  kogelX = kogelX -1; 
+  }
+
+if (kogelVliegt === true &&
+   kogelY < 0) { // kogel verdwijnt
+  kogelVliegt = false;}
 };
 
 /**
@@ -117,14 +135,17 @@ var tekenAlles = function() {
   rect(vijandX - 25, vijandY - 25, 50, 50)
   fill("blue");
   ellipse(vijandX, vijandY, 10, 10);
-  // kogel
-
+ 
   // speler
   fill("blue");
   rect(spelerX - 25, spelerY - 25, 50, 50);
   fill("red");
   ellipse(spelerX, spelerY, 10, 10);
 
+   // kogel
+  fill("red")
+  ellipse(kogelX, kogelY, 20, 20)
+  
   // punten en health
 
 };
