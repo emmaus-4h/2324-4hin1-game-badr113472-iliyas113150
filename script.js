@@ -38,8 +38,8 @@ var kogelX=400;
 var kogelY=300;
 var kogelVliegt = false
 
-var vijandX = 400;
-var vijandY = 600;
+var vijandX = 500;
+var vijandY = 300;
 var health = 100;
 
 /* ********************************************* */
@@ -87,9 +87,15 @@ var beweegAlles = function() {
     kogelVliegt = true;
     kogelX = spelerX;
     kogelY = spelerY;
+   
   }
+  if (kogelVliegt === false &&
+     keyIsDown(3)) {
+    kogelX = vijandX;
+    kogelY = vijandY;
+     }
   if (kogelVliegt === true ) { //kogel vliegt
-  kogelX = kogelX -1; 
+  kogelY = kogelY -1; 
   }
 
 if (kogelVliegt === true &&
@@ -117,6 +123,11 @@ var checkGameOver = function() {
     spelerY - vijandY < 50 &&
     spelerY - vijandY > -50) {
     console.log("Botsing");
+
+    if (kogelX - vijandX < 50 &&
+      kogelX - vijandX > -50 &&
+      kogelY - vijandY < 50 &&
+      kogelY - vijandY > -50)
 
     return true;
   }
